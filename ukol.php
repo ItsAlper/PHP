@@ -1,13 +1,72 @@
 <?php
-function addNumbers($a, $b) {
-  return $a + $b;
+
+require 'Experiment.php';
+
+$dataTypes = ["int", "string", "float", "bool"];
+$setValues = [50, 14.3, 0];
+
+class Conversion
+{
+    public static function convert($from, $to, $value)
+    {
+        switch ($from) {
+            case "int":
+                switch ($to) {
+                    case "int":
+                        return (int) $value;
+                    case "float":
+                        return (float) $value;
+                    case "string":
+                        return (string) $value;
+                    case "bool":
+                        return (bool) $value;
+                }
+                break;
+            case "float":
+                switch ($to) {
+                    case "int":
+                        return (int) $value;
+                    case "float":
+                        return (float) $value;
+                    case "string":
+                        return (string) $value;
+                    case "bool":
+                        return (bool) $value;
+                }
+                break;
+            case "string":
+                switch ($to) {
+                    case "int":
+                        return (int) $value;
+                    case "float":
+                        return (float) $value;
+                    case "string":
+                        return (string) $value;
+                    case "bool":
+                        return (bool) $value;
+                }
+                break;
+            case "bool":
+                switch ($to) {
+                    case "int":
+                        return (int) $value;
+                    case "float":
+                        return (float) $value;
+                    case "string":
+                        return (string) $value;
+                    case "bool":
+                        return (bool) $value;
+                }
+                break;
+        }
+    }
 }
 
-$num1 = "5";
-$num2 = 10;
-
-//Implicitní přetypování "5" na int
-$result = addNumbers($num1, $num2);
-
-echo "Result: " . $result . "\n"; 
-// výstup: Result: 15
+foreach ($setValues as $value) {
+    foreach ($dataTypes as $from) {
+        foreach ($dataTypes as $to) {
+            $result = Conversion::convert($from, $to, $value);
+            echo "$from TO $to (Value = $value) = $result\n";
+        }
+    }
+}
