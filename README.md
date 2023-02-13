@@ -1,3 +1,5 @@
+# Popis úlohy
+
 V takové situaci PHP provede implicitní přetypování, které se pokusí datový typ na správný formát převést.
 
 Při implicitním přetypování float na int se ztratí část desetinných míst. Při implicitním přetypování na bool se použije logická konverze, kdy hodnota 0 bude False a jakákoliv jiná hodnota True.
