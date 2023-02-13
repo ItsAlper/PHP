@@ -3,7 +3,7 @@
 require 'Experiment.php';
 
 $dataTypes = ["int", "string", "float", "bool"];
-$setValues = [50, 14.3, 0];
+$setValues = [20, 11.3, 0];
 
 class Conversion
 {
