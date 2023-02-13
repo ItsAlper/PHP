@@ -69,4 +69,3 @@ foreach ($setValues as $value) {
             echo "$from TO $to (Value = $value) = $result\n";
         }
     }
-}
