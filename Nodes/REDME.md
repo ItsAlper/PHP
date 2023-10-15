@@ -1,4 +1,4 @@
-# POPIS KÓDU
+# NODES - UZLE
 
 ## GRAF
 Graf = asociativní pole. Každý řádek obsahuje nuly a jedničky, kde 1 = existuje a 0 = neexistuje.
