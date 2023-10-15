@@ -9,7 +9,7 @@ $graph = [
     'F' => [0, 1, 0, 0, 1, 0],
 ];
 
-function hasPathSimple($graph, $start, $end) {
+function nodeWay($graph, $start, $end) {
     $visited = [];
     $stack = [$start];
 
@@ -31,5 +31,5 @@ function hasPathSimple($graph, $start, $end) {
 $startNode = 'A';
 $endNode = 'F';
 
-$result = hasPathSimple($graph, $startNode, $endNode);
+$result = nodeWay($graph, $startNode, $endNode);
 echo $result ? 'true' : 'false';
