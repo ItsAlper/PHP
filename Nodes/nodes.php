@@ -36,4 +36,3 @@ $endNode = 'F';
 
 $result = nodeWay($graph, $startNode, $endNode);
 echo $result ? 'true' : 'false';
-?>
